@@ -30,6 +30,10 @@ public class BouncingBallView extends View {
    // Constructor
    public BouncingBallView(Context context) {
       super(context);
+      
+      Level level = new Level("    #####              #   #              #$  #            ###  $##           #  $ $ #         ### # ## #   #######   # ## #####  ..## $  $          ..###### ### #@##  ..#    #     #########    #######        ", 19, 11, "", "", "");
+      level.print();
+      
       ballBounds = new RectF();
       paint = new Paint();
       
@@ -54,7 +58,7 @@ public class BouncingBallView extends View {
          Thread.sleep(30);  
       } catch (InterruptedException e) { }
       
-      invalidate();  // Force a re-draw
+      invalidate(); // Force a re-draw
    }
    
    // Detect collision and update the position of the ball.
