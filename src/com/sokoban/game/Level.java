@@ -249,7 +249,7 @@ public class Level {
       write_pos(m, n, 'a');
     
     // If non-visited cell, test neighbours cells
-    if(a != '#' && a != 's' && a != 'p' && a == 'd' && a != 'a') {
+    if(a != '#' && a != 's' && a != 'p' && a != 'd' && a != 'a') {
       make_floor_rec(m+1, n);
       make_floor_rec(m-1, n);
       make_floor_rec(m, n+1);
