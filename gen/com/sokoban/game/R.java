@@ -983,13 +983,17 @@ containing a value of this type.
         public static final int abc_textfield_searchview_right_holo_light=0x7f020056;
         public static final int box64=0x7f020057;
         public static final int boxgoal64=0x7f020058;
-        public static final int empty64=0x7f020059;
-        public static final int floor64=0x7f02005a;
-        public static final int goal64=0x7f02005b;
-        public static final int ic_launcher=0x7f02005c;
-        public static final int pusher64=0x7f02005d;
-        public static final int pushergoal64=0x7f02005e;
-        public static final int wall64=0x7f02005f;
+        public static final int cancel128=0x7f020059;
+        public static final int cancel128t=0x7f02005a;
+        public static final int empty64=0x7f02005b;
+        public static final int floor64=0x7f02005c;
+        public static final int goal64=0x7f02005d;
+        public static final int ic_launcher=0x7f02005e;
+        public static final int pusher64=0x7f02005f;
+        public static final int pushergoal64=0x7f020060;
+        public static final int restart128=0x7f020061;
+        public static final int restart128t=0x7f020062;
+        public static final int wall64=0x7f020063;
     }
     public static final class id {
         public static final int action_bar=0x7f05001c;
