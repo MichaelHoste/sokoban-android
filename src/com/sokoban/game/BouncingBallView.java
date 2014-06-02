@@ -13,13 +13,8 @@ import android.view.MotionEvent;
 import android.view.View;
    
 public class BouncingBallView extends View {
-  private float ballRadius = 80; // Ball's radius
-  private float ballX = ballRadius + 20;  // Ball's center (x,y)
-  private float ballY = ballRadius + 40;
   private float ballSpeedX = 5;  // Ball's speed (x,y)
   private float ballSpeedY = 3;
-  private RectF ballBounds;      // Needed for Canvas.drawOval
-  private Paint paint;           // The paint (e.g. style, color) used for drawing
   private float previousX;
   private float previousY;
   private Bitmap box64;
@@ -42,9 +37,6 @@ public class BouncingBallView extends View {
       
     level = new Level("    #####              #   #              #$  #            ###  $##           #  $ $ #         ### # ## #   #######   # ## #####  ..## $  $          ..###### ### #@##  ..#    #     #########    #######        ", 19, 11, "", "", "");
     level.print();
-      
-    ballBounds = new RectF();
-    paint = new Paint();
       
     box64        = BitmapFactory.decodeResource(getResources(), R.drawable.box64);
     boxgoal64    = BitmapFactory.decodeResource(getResources(), R.drawable.boxgoal64);
