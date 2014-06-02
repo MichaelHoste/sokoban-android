@@ -12,7 +12,7 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
    
-public class BouncingBallView extends View {
+public class SokobanView extends View {
   private float ballSpeedX = 5;  // Ball's speed (x,y)
   private float ballSpeedY = 3;
   private float previousX;
@@ -32,7 +32,7 @@ public class BouncingBallView extends View {
   private int start_y;
    
   // Constructor
-  public BouncingBallView(Context context) {
+  public SokobanView(Context context) {
     super(context);
       
     level = new Level("    #####              #   #              #$  #            ###  $##           #  $ $ #         ### # ## #   #######   # ## #####  ..## $  $          ..###### ### #@##  ..#    #     #########    #######        ", 19, 11, "", "", "");
@@ -107,24 +107,8 @@ public class BouncingBallView extends View {
     start_x = (w - (int) (box_size * (float) level.cols_number)) / 2;
     start_y = (h - (int) (box_size * (float) level.rows_number)) / 2;
   }
-   
-  // Touch-input handler
-  @Override
-  public boolean onTouchEvent(MotionEvent event) {
-    float currentX = event.getX();
-    float currentY = event.getY();
-    float deltaX, deltaY;
-    switch (event.getAction()) {
-       case MotionEvent.ACTION_MOVE:
-          // Modify rotational angles according to movement
-          deltaX = currentX - previousX;
-          deltaY = currentY - previousY;
-          ballSpeedX = deltaX;
-          ballSpeedY = deltaY;
-    }
-    // Save current x, y
-    previousX = currentX;
-    previousY = currentY;
-    return true;  // Event handled
+  
+  public Level getLevel() {
+    return level;
   }
 }
